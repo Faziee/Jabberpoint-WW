@@ -1,1 +1,1 @@
-# Jabberpoint-WW
+# Jabberpoint
