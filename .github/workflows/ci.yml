@@ -64,6 +64,6 @@ jobs:
         settings-path: ${{ github.workspace }}
 
     - name: Build and Deploy to GitHub Packages
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      run: mvn deploy -s $GITHUB_WORKSPACE/.github/maven/settings.xml
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
