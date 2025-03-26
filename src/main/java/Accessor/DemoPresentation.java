@@ -1,3 +1,9 @@
+package Accessor;
+
+import Composite.BitmapItem;
+import Composite.Slide;
+import Presentation.Presentation;
+
 /** Een ingebouwde demo-presentatie
  * @author Ian F. Darwin, ian@darwinsys.com, Gert Florijn, Sylvia Stuurman
  * @version 1.1 2002/12/17 Gert Florijn
@@ -11,15 +17,15 @@
 class DemoPresentation extends Accessor {
 
 	public void loadFile(Presentation presentation, String unusedFilename) {
-		presentation.setTitle("Demo Presentation");
+		presentation.setTitle("Demo Presentation.Presentation");
 		Slide slide;
 		slide = new Slide();
-		slide.setTitle("JabberPoint");
+		slide.setTitle("Presentation.JabberPoint");
 		slide.append(1, "Het Java Presentatie Tool");
 		slide.append(2, "Copyright (c) 1996-2000: Ian Darwin");
 		slide.append(2, "Copyright (c) 2000-now:");
 		slide.append(2, "Gert Florijn en Sylvia Stuurman");
-		slide.append(4, "JabberPoint aanroepen zonder bestandsnaam");
+		slide.append(4, "Presentation.JabberPoint aanroepen zonder bestandsnaam");
 		slide.append(4, "laat deze presentatie zien");
 		slide.append(1, "Navigeren:");
 		slide.append(3, "Volgende slide: PgDn of Enter");
@@ -44,7 +50,7 @@ class DemoPresentation extends Accessor {
 		slide.append(2, "gebruik File->Open uit het menu.");
 		slide.append(1, " ");
 		slide.append(1, "Dit is het einde van de presentatie.");
-		slide.append(new BitmapItem(1, "JabberPoint.jpg"));
+		slide.append(new BitmapItem(1, "Presentation.JabberPoint.jpg"));
 		presentation.append(slide);
 	}
 

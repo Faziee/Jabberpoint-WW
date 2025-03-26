@@ -1,3 +1,8 @@
+package Composite;
+
+import Composite.SlideItem;
+import FactoryMethod.Style;
+
 import java.awt.Rectangle;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -20,7 +25,8 @@ import java.io.IOException;
  * @version 1.6 2014/05/16 Sylvia Stuurman
 */
 
-public class BitmapItem extends SlideItem {
+public class BitmapItem extends SlideItem
+{
   private BufferedImage bufferedImage;
   private String imageName;
   
@@ -66,6 +72,6 @@ public class BitmapItem extends SlideItem {
 	}
 
 	public String toString() {
-		return "BitmapItem[" + getLevel() + "," + imageName + "]";
+		return "Composite.BitmapItem[" + getLevel() + "," + imageName + "]";
 	}
 }
