@@ -2,6 +2,7 @@ package Composite;
 
 import Composite.SlideItem;
 import FactoryMethod.Style;
+import FactoryMethod.StyleFactory;
 
 import java.awt.Rectangle;
 import java.awt.Graphics;
@@ -27,48 +28,48 @@ import java.io.IOException;
 
 public class BitmapItem extends SlideItem
 {
-  private BufferedImage bufferedImage;
-  private String imageName;
-  
-  protected static final String FILE = "Bestand ";
-  protected static final String NOTFOUND = " niet gevonden";
+	private BufferedImage bufferedImage;
+	private String imageName;
 
-// level staat voor het item-level; name voor de naam van het bestand met de afbeelding
-	public BitmapItem(int level, String name) {
-		super(level);
-		imageName = name;
-		try {
-			bufferedImage = ImageIO.read(new File(imageName));
+
+	// level represents the item level; name for the name of the file containing the image
+
+	public BitmapItem(int level, StyleFactory styleFactory, String imageName)
+	{
+		super(level, styleFactory);
+		this.imageName = imageName;
+		try
+		{
+			this.bufferedImage = ImageIO.read(new File(imageName));
 		}
-		catch (IOException e) {
-			System.err.println(FILE + imageName + NOTFOUND) ;
+		catch (IOException e)
+		{
+			throw new RuntimeException("Error loading image: " + imageName, e);
 		}
 	}
 
-// Een leeg bitmap-item
-	public BitmapItem() {
-		this(0, null);
-	}
-
-// geef de bestandsnaam van de afbeelding
-	public String getName() {
+	// geef de bestandsnaam van de afbeelding
+	public String getName()
+	{
 		return imageName;
 	}
 
-// geef de bounding box van de afbeelding
-	public Rectangle getBoundingBox(Graphics g, ImageObserver observer, float scale, Style myStyle) {
-		return new Rectangle((int) (myStyle.indent * scale), 0,
-				(int) (bufferedImage.getWidth(observer) * scale),
-				((int) (myStyle.leading * scale)) + 
-				(int) (bufferedImage.getHeight(observer) * scale));
+	@Override
+	public Rectangle getBoundingBox(Graphics graphics, ImageObserver observer, float scale, int styleLevel)
+	{
+		Style style = this.getStyleFactory().createStyle(styleLevel);
+
+		return new Rectangle((int) (style.getIndent() * scale), 0, (int) (this.bufferedImage.getWidth(observer) * scale), ((int) (style.getLeading() * scale)) + (int) (this.bufferedImage.getHeight(observer) * scale));
 	}
 
-// teken de afbeelding
-	public void draw(int x, int y, float scale, Graphics g, Style myStyle, ImageObserver observer) {
-		int width = x + (int) (myStyle.indent * scale);
-		int height = y + (int) (myStyle.leading * scale);
-		g.drawImage(bufferedImage, width, height,(int) (bufferedImage.getWidth(observer)*scale),
-                (int) (bufferedImage.getHeight(observer)*scale), observer);
+	@Override
+	public void draw(int x, int y, float scale, Graphics graphics, int styleLevel, ImageObserver observer)
+	{
+		Style style = this.getStyleFactory().createStyle(styleLevel);
+		int width = x + (int) (style.getIndent() * scale);
+		int height = y + (int) (style.getLeading() * scale);
+		graphics.drawImage(bufferedImage, width, height,(int) (bufferedImage.getWidth(observer)*scale), (int) (bufferedImage.getHeight(observer)*scale), observer);
+
 	}
 
 	public String toString() {
