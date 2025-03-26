@@ -1,3 +1,8 @@
+package Presentation;
+
+import Composite.Slide;
+import Presentation.Presentation;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Dimension;
@@ -7,7 +12,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 
-/** <p>SlideViewerComponent is een grafische component die Slides kan laten zien.</p>
+/** <p>Presentation.SlideViewerComponent is een grafische component die Slides kan laten zien.</p>
  * @author Ian F. Darwin, ian@darwinsys.com, Gert Florijn, Sylvia Stuurman
  * @version 1.1 2002/12/17 Gert Florijn
  * @version 1.2 2003/11/19 Sylvia Stuurman
@@ -65,7 +70,7 @@ public class SlideViewerComponent extends JComponent {
 		}
 		g.setFont(labelFont);
 		g.setColor(COLOR);
-		g.drawString("Slide " + (1 + presentation.getSlideNumber()) + " of " +
+		g.drawString("Composite.Slide " + (1 + presentation.getSlideNumber()) + " of " +
                  presentation.getSize(), XPOS, YPOS);
 		Rectangle area = new Rectangle(0, YPOS, getWidth(), (getHeight() - YPOS));
 		slide.draw(g, area, this);

@@ -1,3 +1,9 @@
+package Composite;
+
+import Composite.Slide;
+import Composite.SlideItem;
+import FactoryMethod.Style;
+
 import java.awt.Rectangle;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -14,7 +20,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 /** <p>Een tekst item.</p>
- * <p>Een TextItem heeft tekenfunctionaliteit.</p>
+ * <p>Een Composite.TextItem heeft tekenfunctionaliteit.</p>
  * @author Ian F. Darwin, ian@darwinsys.com, Gert Florijn, Sylvia Stuurman
  * @version 1.1 2002/12/17 Gert Florijn
  * @version 1.2 2003/11/19 Sylvia Stuurman
@@ -24,7 +30,8 @@ import java.util.ArrayList;
  * @version 1.6 2014/05/16 Sylvia Stuurman
  */
 
-public class TextItem extends SlideItem {
+public class TextItem extends SlideItem
+{
 	private String text;
 	
 	private static final String EMPTYTEXT = "No Text Given";
@@ -107,6 +114,6 @@ public class TextItem extends SlideItem {
 	}
 
 	public String toString() {
-		return "TextItem[" + getLevel()+","+getText()+"]";
+		return "Composite.TextItem[" + getLevel()+","+getText()+"]";
 	}
 }
