@@ -1,6 +1,6 @@
 package Composite;
 
-import FactoryMethod.Style;
+import FactoryMethod.StyleFactory;
 
 import java.awt.Rectangle;
 import java.awt.Graphics;
@@ -18,26 +18,26 @@ import java.awt.image.ImageObserver;
 */
 
 public abstract class SlideItem {
-	private int level = 0; // het level van het slideitem
+	private int level;
+	private StyleFactory styleFactory;
 
-	public SlideItem(int lev) {
-		level = lev;
+	public SlideItem(int level, StyleFactory styleFactory)
+	{
+		this.level = level;
+		this.styleFactory = styleFactory;
 	}
 
-	public SlideItem() {
-		this(0);
+	public int getLevel()
+	{
+		return this.level;
 	}
 
-// Geef het level
-	public int getLevel() {
-		return level;
+	public StyleFactory getStyleFactory()
+	{
+		return this.styleFactory;
 	}
 
-// Geef de bounding box
-	public abstract Rectangle getBoundingBox(Graphics g, 
-			ImageObserver observer, float scale, Style style);
+	public abstract Rectangle getBoundingBox(Graphics graphics, ImageObserver observer, float scale, int styleLevel);
 
-// teken het item
-	public abstract void draw(int x, int y, float scale,
-                              Graphics g, Style style, ImageObserver observer);
+	public abstract void draw(int x, int y, float scale, Graphics graphics, int styleLevel, ImageObserver observer);
 }

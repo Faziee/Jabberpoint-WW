@@ -1,5 +1,6 @@
 package Presentation;
 
+import Accessor.XMLAccessor;
 import FactoryMethod.Style;
 import Presentation.Presentation;
 
@@ -30,6 +31,7 @@ public class JabberPoint {
 	public static void main(String argv[]) {
 		
 		Style.createStyles();
+		//need to call the style factory from slide in the present tation so presentation.slide.stylefactory
 		Presentation presentation = new Presentation();
 		new SlideViewerFrame(JABVERSION, presentation);
 		try {
