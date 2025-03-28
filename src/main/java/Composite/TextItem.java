@@ -35,9 +35,9 @@ public class TextItem extends SlideItem
 {
 	private String text;
 
-	public TextItem(int level, StyleFactory styleFactory, String text)
+	public TextItem(int level, String text)
 	{
-		super(level,styleFactory);
+		super(level);
 		this.text = text;
 	}
 
@@ -46,15 +46,11 @@ public class TextItem extends SlideItem
 		return this.text == null ? "" : this.text;
 	}
 
-	public void setText(String text)
-	{
-		this.text = text;
-	}
 
 	// return the bounding box of the item
 	public Rectangle getBoundingBox(Graphics graphics, ImageObserver observer, float scale, int styleLevel)
 	{
-		Style style = getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 
 		List<TextLayout> layouts = getLayouts(graphics, styleLevel, scale);
 
@@ -77,9 +73,9 @@ public class TextItem extends SlideItem
 		return new Rectangle((int) (style.getIndent() * scale), 0, xsize, ysize );
 	}
 
-	public void draw(int x, int y, float scale, Graphics graphics, int styleLevel, ImageObserver o)
+	public void draw(int x, int y, float scale, Graphics graphics, int styleLevel, ImageObserver imageObserver)
 	{
-		Style style = getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 
 		List<TextLayout> layouts = getLayouts(graphics, styleLevel, scale);
 
@@ -108,7 +104,7 @@ public class TextItem extends SlideItem
 	// provide the AttributedString for the item
 	public AttributedString getAttributedString(int styleLevel, float scale)
 	{
-		Style style = getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 
 		AttributedString attrStr = new AttributedString(getText());
 
@@ -119,7 +115,7 @@ public class TextItem extends SlideItem
 
 	private List<TextLayout> getLayouts(Graphics graphics, int styleLevel, float scale)
 	{
-		Style style = getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 
 		List<TextLayout> layouts = new ArrayList<>();
 		AttributedString attrStr = getAttributedString(styleLevel, scale);

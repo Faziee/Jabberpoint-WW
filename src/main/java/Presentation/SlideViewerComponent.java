@@ -24,10 +24,10 @@ import javax.swing.JFrame;
 
 public class SlideViewerComponent extends JComponent {
 		
-	private Slide slide; // de huidige slide
-	private Font labelFont = null; // het font voor labels
-	private Presentation presentation = null; // de presentatie
-	private JFrame frame = null;
+	private Slide slide;
+	private Font labelFont; // removed redundant initializer
+	private Presentation presentation; // removed redundant initializer
+	private JFrame frame;// removed redundant initializer
 	
 	private static final long serialVersionUID = 227L;
 	
@@ -39,18 +39,22 @@ public class SlideViewerComponent extends JComponent {
 	private static final int XPOS = 1100;
 	private static final int YPOS = 20;
 
-	public SlideViewerComponent(Presentation pres, JFrame frame) {
-		setBackground(BGCOLOR); 
-		presentation = pres;
-		labelFont = new Font(FONTNAME, FONTSTYLE, FONTHEIGHT);
+	public SlideViewerComponent(Presentation presentation, JFrame frame)
+	{
+		this.slide = new Slide("Current slide", 0);
+		setBackground(BGCOLOR);
+		this.presentation = presentation;
+		this.labelFont = new Font(FONTNAME, FONTSTYLE, FONTHEIGHT);
 		this.frame = frame;
 	}
 
-	public Dimension getPreferredSize() {
+	public Dimension getPreferredSize()
+	{
 		return new Dimension(Slide.WIDTH, Slide.HEIGHT);
 	}
 
-	public void update(Presentation presentation, Slide data) {
+	public void update(Presentation presentation, Slide data)
+	{
 		if (data == null) {
 			repaint();
 			return;
@@ -58,21 +62,30 @@ public class SlideViewerComponent extends JComponent {
 		this.presentation = presentation;
 		this.slide = data;
 		repaint();
-		frame.setTitle(presentation.getTitle());
+		this.frame.setTitle(presentation.getTitle());
 	}
 
 // teken de slide
-	public void paintComponent(Graphics g) {
-		g.setColor(BGCOLOR);
-		g.fillRect(0, 0, getSize().width, getSize().height);
-		if (presentation.getSlideNumber() < 0 || slide == null) {
+	public void paintComponent(Graphics graphics)
+	{
+		super.paintComponent(graphics); // Call superclass method to ensure proper rendering
+
+		graphics.setColor(BGCOLOR);
+		graphics.fillRect(0, 0, getSize().width, getSize().height);
+
+		if (this.presentation.getSlideNumber() < 0 || slide == null)
+		{
 			return;
 		}
-		g.setFont(labelFont);
-		g.setColor(COLOR);
-		g.drawString("Composite.Slide " + (1 + presentation.getSlideNumber()) + " of " +
-                 presentation.getSize(), XPOS, YPOS);
+
+		graphics.setFont(this.labelFont);
+		graphics.setColor(COLOR);
+		graphics.drawString("Composite.Slide " + (1 + this.presentation.getSlideNumber()) + " of " + this.presentation.getSize(), XPOS, YPOS);
+
 		Rectangle area = new Rectangle(0, YPOS, getWidth(), (getHeight() - YPOS));
-		slide.draw(g, area, this);
+
+		float scale = Math.min((float) area.width / Slide.WIDTH, (float) area.height / Slide.HEIGHT);
+
+		this.slide.draw(area.x, area.y, scale, graphics, this.slide.getLevel(), this);
 	}
 }

@@ -34,9 +34,9 @@ public class BitmapItem extends SlideItem
 
 	// level represents the item level; name for the name of the file containing the image
 
-	public BitmapItem(int level, StyleFactory styleFactory, String imageName)
+	public BitmapItem(int level, String imageName)
 	{
-		super(level, styleFactory);
+		super(level);
 		this.imageName = imageName;
 		try
 		{
@@ -57,7 +57,7 @@ public class BitmapItem extends SlideItem
 	@Override
 	public Rectangle getBoundingBox(Graphics graphics, ImageObserver observer, float scale, int styleLevel)
 	{
-		Style style = this.getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 
 		return new Rectangle((int) (style.getIndent() * scale), 0, (int) (this.bufferedImage.getWidth(observer) * scale), ((int) (style.getLeading() * scale)) + (int) (this.bufferedImage.getHeight(observer) * scale));
 	}
@@ -65,14 +65,15 @@ public class BitmapItem extends SlideItem
 	@Override
 	public void draw(int x, int y, float scale, Graphics graphics, int styleLevel, ImageObserver observer)
 	{
-		Style style = this.getStyleFactory().createStyle(styleLevel);
+		Style style = StyleFactory.createStyle(styleLevel);
 		int width = x + (int) (style.getIndent() * scale);
 		int height = y + (int) (style.getLeading() * scale);
 		graphics.drawImage(bufferedImage, width, height,(int) (bufferedImage.getWidth(observer)*scale), (int) (bufferedImage.getHeight(observer)*scale), observer);
 
 	}
 
-	public String toString() {
+	public String toString()
+	{
 		return "Composite.BitmapItem[" + getLevel() + "," + imageName + "]";
 	}
 }
