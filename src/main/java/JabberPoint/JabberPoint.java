@@ -1,7 +1,7 @@
-package Presentation;
+package JabberPoint;
 
-import Accessor.XMLAccessor;
-import FactoryMethod.Style;
+import Accessor.*;
+import Presentation.SlideViewerFrame;
 import Presentation.Presentation;
 
 import javax.swing.JOptionPane;
@@ -28,20 +28,24 @@ public class JabberPoint {
 	protected static final String JABVERSION = "Jabberpoint 1.6 - OU version";
 
 	/** Het Main Programma */
-	public static void main(String argv[]) {
-		
-		Style.createStyles();
-		//need to call the style factory from slide in the present tation so presentation.slide.stylefactory
+	public static void main(String argv[])
+	{
 		Presentation presentation = new Presentation();
+
 		new SlideViewerFrame(JABVERSION, presentation);
-		try {
-			if (argv.length == 0) { // een demo presentatie
+		try
+		{
+			if (argv.length == 0)
+			{ // een demo presentatie
 				Accessor.getDemoAccessor().loadFile(presentation, "");
-			} else {
+			} else
+			{
 				new XMLAccessor().loadFile(presentation, argv[0]);
 			}
 			presentation.setSlideNumber(0);
-		} catch (IOException ex) {
+		}
+		catch (IOException ex)
+		{
 			JOptionPane.showMessageDialog(null,
 					IOERR + ex, JABERR,
 					JOptionPane.ERROR_MESSAGE);

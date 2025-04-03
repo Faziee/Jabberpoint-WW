@@ -1,7 +1,6 @@
 package Presentation;
 
 import Composite.Slide;
-import Presentation.Presentation;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -33,18 +32,18 @@ public class SlideViewerComponent extends JComponent {
 	
 	private static final Color BGCOLOR = Color.white;
 	private static final Color COLOR = Color.black;
-	private static final String FONTNAME = "Dialog";
-	private static final int FONTSTYLE = Font.BOLD;
-	private static final int FONTHEIGHT = 10;
-	private static final int XPOS = 1100;
-	private static final int YPOS = 20;
+	private static final String FONT_NAME = "Dialog";
+	private static final int FONT_STYLE = Font.BOLD;
+	private static final int FONT_HEIGHT = 10;
+	private static final int X_POS = 1100;
+	private static final int Y_POS = 20;
 
 	public SlideViewerComponent(Presentation presentation, JFrame frame)
 	{
 		this.slide = new Slide("Current slide", 0);
 		setBackground(BGCOLOR);
 		this.presentation = presentation;
-		this.labelFont = new Font(FONTNAME, FONTSTYLE, FONTHEIGHT);
+		this.labelFont = new Font(FONT_NAME, FONT_STYLE, FONT_HEIGHT);
 		this.frame = frame;
 	}
 
@@ -80,9 +79,9 @@ public class SlideViewerComponent extends JComponent {
 
 		graphics.setFont(this.labelFont);
 		graphics.setColor(COLOR);
-		graphics.drawString("Composite.Slide " + (1 + this.presentation.getSlideNumber()) + " of " + this.presentation.getSize(), XPOS, YPOS);
+		graphics.drawString("Composite.Slide " + (1 + this.presentation.getSlideNumber()) + " of " + this.presentation.getSize(), X_POS, Y_POS);
 
-		Rectangle area = new Rectangle(0, YPOS, getWidth(), (getHeight() - YPOS));
+		Rectangle area = new Rectangle(0, Y_POS, getWidth(), (getHeight() - Y_POS));
 
 		float scale = Math.min((float) area.width / Slide.WIDTH, (float) area.height / Slide.HEIGHT);
 

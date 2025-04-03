@@ -5,16 +5,15 @@ import Composite.SlideItem;
 
 public class BitmapItemFactory implements SlideItemFactory
 {
-    private final StyleFactory styleFactory;
 
-    public BitmapItemFactory(StyleFactory styleFactory)
+    public BitmapItemFactory()
     {
-        this.styleFactory = styleFactory;
+
     }
 
     @Override
     public SlideItem createSlideItem(int level, String content)
     {
-        return new BitmapItem(level, this.styleFactory, content);
+        return new BitmapItem(level, content);
     }
 }
