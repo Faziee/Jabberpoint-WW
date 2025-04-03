@@ -1,0 +1,80 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e420ed30-ed06-44a9-a284-bf6546bcf342\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/dump.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dump.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Accessor/Accessor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Accessor/Accessor.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Command/AboutBox.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Presentation/AboutBox.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Command/KeyController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Command/KeyController/KeyController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Command/MenuController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Command/MenuController/MenuController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Presentation/Presentation.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Presentation/Presentation.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n        <option value=\"Enum\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 3\n}</component>\n  <component name=\"ProjectId\" id=\"2up56VeJmBRICeTECb3c2Ii3CK5\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.JabberPoint.executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"feature/command\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"settings.editor.selected.configurable\": \"File.Encoding\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e420ed30-ed06-44a9-a284-bf6546bcf342\" name=\"Changes\" comment=\"\" />\n      <created>1742932499872</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1742932499872</updated>\n      <workItem from=\"1742932501258\" duration=\"1160000\" />\n      <workItem from=\"1742996424650\" duration=\"2389000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6d14916e53c6d458a90e80663e68c9a1dea15b09)
++++ b/.idea/workspace.xml	(date 1743707993327)
+@@ -5,19 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e420ed30-ed06-44a9-a284-bf6546bcf342" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dump.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dump.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/Accessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/Accessor.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AboutBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/AboutBox.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/KeyController/KeyController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/MenuController/MenuController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/Presentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/Presentation.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -46,23 +34,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.JabberPoint.executor": "Run",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "feature/command",
+-    "kotlin-language-version-configured": "true",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "File.Encoding",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.JabberPoint.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;feature/command&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -73,6 +61,9 @@
+       <updated>1742932499872</updated>
+       <workItem from="1742932501258" duration="1160000" />
+       <workItem from="1742996424650" duration="2389000" />
++      <workItem from="1743707671968" duration="169000" />
++      <workItem from="1743707892269" duration="73000" />
++      <workItem from="1743707982312" duration="11000" />
+     </task>
+     <servers />
+   </component>

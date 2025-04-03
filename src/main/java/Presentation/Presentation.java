@@ -18,10 +18,10 @@ import java.util.ArrayList;
  */
 
 public class Presentation {
-	private String title; // de titel van de presentatie
-	private ArrayList<Slide> slides = null; // een ArrayList met de Slides
-	private int currentSlideNumber = 0; // het slidenummer van de huidige Composite.Slide
-	private SlideViewerComponent slideViewComponent; // de viewcomponent voor de Slides
+	private String title;
+	private ArrayList<Slide> slides = null;
+	private int currentSlideNumber = 0;
+	private SlideViewerComponent slideViewComponent;
 
 	public Presentation()
 	{
@@ -55,13 +55,11 @@ public class Presentation {
 		this.slideViewComponent = slideViewerComponent;
 	}
 
-	// geef het nummer van de huidige slide
 	public int getSlideNumber()
 	{
 		return this.currentSlideNumber;
 	}
 
-	// verander het huidige-slide-nummer en laat het aan het window weten.
 	public void setSlideNumber(int number)
 	{
 		this.currentSlideNumber = number;
@@ -71,7 +69,6 @@ public class Presentation {
 		}
 	}
 
-	// ga naar de vorige slide tenzij je aan het begin van de presentatie bent
 	public void prevSlide() {
 		if (this.currentSlideNumber > 0)
 		{
@@ -79,7 +76,6 @@ public class Presentation {
 	    }
 	}
 
-	// Ga naar de volgende slide tenzij je aan het einde van de presentatie bent.
 	public void nextSlide()
 	{
 		if (this.currentSlideNumber < (slides.size()-1))
@@ -88,20 +84,17 @@ public class Presentation {
 		}
 	}
 
-	// Verwijder de presentatie, om klaar te zijn voor de volgende
-	void clear()
+	public void clear()
 	{
-		this.slides = new ArrayList<>();
+		this.slides = new ArrayList<Slide>();
 		setSlideNumber(-1);
 	}
 
-	// Voeg een slide toe aan de presentatie
 	public void append(Slide slide)
 	{
 		this.slides.add(slide);
 	}
 
-	// Geef een slide met een bepaald slidenummer
 	public Slide getSlide(int number)
 	{
 		if (number < 0 || number >= getSize())
@@ -112,7 +105,6 @@ public class Presentation {
 		return this.slides.get(number);
 	}
 
-	// Geef de huidige Composite.Slide
 	public Slide getCurrentSlide()
 	{
 		return getSlide(currentSlideNumber);
