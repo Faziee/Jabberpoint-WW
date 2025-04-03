@@ -1,7 +1,7 @@
 package Presentation;
 
 import FactoryMethod.Style;
-import Presentation.Presentation;
+import Accessor.*;
 
 import javax.swing.JOptionPane;
 
@@ -28,7 +28,7 @@ public class JabberPoint {
 
 	/** Het Main Programma */
 	public static void main(String argv[]) {
-		
+
 		Style.createStyles();
 		Presentation presentation = new Presentation();
 		new SlideViewerFrame(JABVERSION, presentation);

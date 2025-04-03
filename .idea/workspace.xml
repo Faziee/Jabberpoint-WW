@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e420ed30-ed06-44a9-a284-bf6546bcf342" name="Changes" comment="" />
+    <list default="true" id="e420ed30-ed06-44a9-a284-bf6546bcf342" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dump.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/Accessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/Accessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/DemoPresentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accessor/XMLAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AboutBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/AboutBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/KeyController/KeyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/MenuController/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FactoryMethod/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/JabberPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/Presentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/Presentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presentation/SlideViewerFrame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,10 +48,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.JabberPoint.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/command-pattern",
+    "git-widget-placeholder": "feature/command",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

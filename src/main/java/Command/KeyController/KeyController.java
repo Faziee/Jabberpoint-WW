@@ -1,10 +1,12 @@
-package Command;
+package Command.KeyController;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyAdapter;
 
+import Command.Command;
+import Presentation.Presentation;
 
-/** <p>This is the Command.KeyController (KeyListener)</p>
+/** <p>This is the Command.KeyController.KeyController (KeyListener)</p>
  * @author Ian F. Darwin, ian@darwinsys.com, Gert Florijn, Sylvia Stuurman
  * @version 1.1 2002/12/17 Gert Florijn
  * @version 1.2 2003/11/19 Sylvia Stuurman
@@ -15,29 +17,34 @@ import java.awt.event.KeyAdapter;
 */
 
 public class KeyController extends KeyAdapter {
-	private Presentation presentation; // Er worden commando's gegeven aan de presentatie
+	private Presentation presentation;
 
-	public KeyController(Presentation p) {
-		presentation = p;
+	public KeyController(Presentation presentation) {
+		this.presentation = presentation;
 	}
 
+	//change the UI text to say pageup for next slide
 	public void keyPressed(KeyEvent keyEvent) {
+		Command operation = null;
 		switch(keyEvent.getKeyCode()) {
 			case KeyEvent.VK_PAGE_DOWN:
 			case KeyEvent.VK_DOWN:
 			case KeyEvent.VK_ENTER:
 			case '+':
-				presentation.nextSlide();
+				operation = new NextSlide(this.presentation);
+				operation.execute();
 				break;
 			case KeyEvent.VK_PAGE_UP:
 			case KeyEvent.VK_UP:
 			case '-':
-				presentation.prevSlide();
+				operation = new PreviousSlide(this.presentation);
+				operation.execute();
 				break;
 			case 'q':
 			case 'Q':
-				System.exit(0);
-				break; // wordt nooit bereikt als het goed is
+				operation = new Quit(this.presentation);
+				operation.execute();
+				break;
 			default:
 				break;
 		}
